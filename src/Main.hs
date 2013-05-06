@@ -2,6 +2,7 @@ import BabySteps
 import Patterns
 import Rational
 import Tree
+import RPN
 
 main = do
    putStrLn "--- Baby Steps"
@@ -12,3 +13,5 @@ main = do
    showRational
    putStrLn "--- Making a funtor for a tree"
    showTree
+   putStrLn "--- Simple RPN calculator"
+   showRPN
