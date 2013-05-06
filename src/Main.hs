@@ -1,6 +1,7 @@
 import BabySteps
 import Patterns
 import Rational
+import Tree
 
 main = do
    putStrLn "--- Baby Steps"
@@ -9,3 +10,5 @@ main = do
    showPatterns
    putStrLn "--- Naive implementation of rational numbers"
    showRational
+   putStrLn "--- Making a funtor for a tree"
+   showTree
