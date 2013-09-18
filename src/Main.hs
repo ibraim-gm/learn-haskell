@@ -4,6 +4,7 @@ import Rational
 import Tree
 import RPN
 import StackDemo
+import StackTransformer
 
 main = do
    putStrLn "--- Baby Steps"
@@ -18,3 +19,5 @@ main = do
    showRPN
    putStrLn "--- Stack (State) demo"
    showStackDemo
+   putStrLn "--- Stack (State + IO) demo"
+   showStackTransformer
