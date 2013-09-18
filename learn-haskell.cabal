@@ -16,7 +16,9 @@ version:             0.1.0.0
 synopsis:            My experience learning haskell
 
 -- A longer description of the package.
--- description:
+description: An executable with shows the result of some tests. I used this as a reference when I was learning haskell.
+
+category: Other
 
 -- The license under which the package is released.
 license:             BSD3
@@ -52,5 +54,5 @@ executable learn-haskell
   other-modules: BabySteps
 
   -- Other library packages from which modules are imported.
-  build-depends: base,
+  build-depends: base == 4.6.*,
                  transformers == 0.3.*
