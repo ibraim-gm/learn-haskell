@@ -25,21 +25,22 @@ type StatefulStack a = StateT Stack IO a
 push :: Int -> StatefulStack ()
 push a = do
   liftIO . putStrLn $ ">> Pushing the value " ++ (show a)
-  state $ \xs -> ((),a:xs)
+  modify (a:)
 
 -- popping
 pop :: StatefulStack Int
 pop = do
   (x:xs) <- get
   liftIO . putStrLn $ ">> Popping the value " ++ (show x)
-  state $ \_ -> (x,xs)
+  put xs
+  return x
 
 -- peeking
 peek :: StatefulStack Int
 peek = do
   (x:xs) <- get
   liftIO . putStrLn $ ">> Peeking the value " ++ (show x)
-  state $ \_ -> (x,x:xs)
+  return x
 
 -- manipulate the stack
 manipulateStack :: StatefulStack Int

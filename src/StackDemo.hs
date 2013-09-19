@@ -14,7 +14,7 @@ type StatefulStack a = State Stack a
 
 -- pushing values to the stack
 push :: Int -> StatefulStack ()
-push a = state $ \xs -> ((),a:xs)
+push a = modify (a:)
 
 -- pop values from the state
 pop :: StatefulStack Int
